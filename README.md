@@ -117,11 +117,4 @@ To clone and run this application locally, follow these steps:
 
 This application was developed with guidance from the tutorial series available on YouTube by Antosha Korsakov. The tutorial provided invaluable insights and instructions on implementing Spring Security in the project. You can find the tutorial video [here](https://youtu.be/U1y8GsJ8CQs).
 
-## Contributing
-
-Contributions are welcome! If you have any suggestions, improvements, or feature requests, feel free to open an issue or create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```

@@ -115,6 +115,6 @@ To clone and run this application locally, follow these steps:
 
 ## Acknowledgements
 
-This application was developed with guidance from the tutorial series available on YouTube by Antosha Korsakov. The tutorial provided invaluable insights and instructions on implementing Spring Security in the project. You can find the tutorial video [here](https://youtu.be/U1y8GsJ8CQs).
+This application was developed with guidance from the tutorial video available on YouTube by Antosha Korsakov. The tutorial provided invaluable insights and instructions on implementing Spring Security in the project. You can find the tutorial video [here](https://youtu.be/U1y8GsJ8CQs).
 
 ```

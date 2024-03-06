@@ -6,6 +6,7 @@ import com.maksimkaxxl.springsecurityapp.models.MyUser;
 import com.maksimkaxxl.springsecurityapp.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class AppService {
     private List<Application> applications;
 
     private UserRepository repository;
+    private PasswordEncoder passwordEncoder;
 
     @PostConstruct
     public void loadAppInDB() {
@@ -45,6 +47,7 @@ public class AppService {
     }
 
     public void addUser(MyUser user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         repository.save(user);
     }
 

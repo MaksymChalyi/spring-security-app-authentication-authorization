@@ -2,16 +2,22 @@ package com.maksimkaxxl.springsecurityapp.services;
 
 import com.github.javafaker.Faker;
 import com.maksimkaxxl.springsecurityapp.models.Application;
+import com.maksimkaxxl.springsecurityapp.models.MyUser;
+import com.maksimkaxxl.springsecurityapp.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.IntStream;
 
 @Service
+@AllArgsConstructor
 public class AppService {
 
     private List<Application> applications;
+
+    private UserRepository repository;
 
     @PostConstruct
     public void loadAppInDB() {
@@ -37,5 +43,10 @@ public class AppService {
                 .findFirst()
                 .orElse(null);
     }
+
+    public void addUser(MyUser user) {
+        repository.save(user);
+    }
+
 
 }
